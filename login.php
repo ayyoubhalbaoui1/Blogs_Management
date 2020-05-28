@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+  
+
+   
+    include "checklogin.php";
+    include "checksignup.php";
+
+  
+
+?>
+
+
+
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/login.css">
 </head>
 
 <body>
+	
+    <div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+				<h1>Create Account</h1>
 
-  <!-- header -->
-  <header class="clearfix">
-    <div class="logo">
-      <a href="index.php">
-        <h1 class="logo-text"><span>Awa</span>Inspires</h1>
-      </a>
-    </div>
-    <div class="fa fa-reorder menu-toggle"></div>
-    <nav>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="register.php">Sign up</a></li>
-        <li>
-          <a href="login.php">
-            <i class="fa fa-sign-in"></i>
-            Login
-          </a>
-        </li>
+			      <span><?php echo $msg;   ?></span>
+                <span><?php echo $usErr;   ?></span>
+				<input type="text" name="username" placeholder="username" />
+				<span><?php echo $passErr;   ?></span>
+				<input type="password" name="password" placeholder="Password" />
+				<button  type="submit" name="register">Sign Up</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">   
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+				<!-- <h1>Sign in</h1>
+                <span style="color: red"><?php echo $ms;?></span> -->
+                <!--  <span><?php echo $userErr;   ?></span> -->
+				<input type="text" name="username"   placeholder="username" />
+				 <!--  <span><?php echo $passwordErr;   ?></span> -->
+				<input type="password" name="password" placeholder="Password" />
+				<a href="#">Forgot your password?</a>
+				<button type="submit" name="login">Sign In</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Welcome Back!</h1>
+					<p>To connected with us please enter your personal informations</p>
+					<button class="ghost" id="signIn">Sign In</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Welcome !</h1>
+					<p>please enter your information.</p>
+					<button class="ghost" id="signUp">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        <!-- <li>
-          <a href="#" class="userinfo">
-            <i class="fa fa-user"></i>
-            Awa Melvine
-            <i class="fa fa-chevron-down"></i>
-          </a>
-          <ul class="dropdown">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#" class="logout">logout</a></li>
-          </ul>
-        </li> -->
-      </ul>
-    </nav>
-  </header>
-  <!-- // header -->
 
-  <div class="auth-content">
-    <form action="login.php" method="post">
-      <h3 class="form-title">Login</h3>
-      <!-- <div class="msg error">
-        <li>Username required</li>
-      </div> -->
-      <div>
-        <label>Username</label>
-        <input type="text" name="username" class="text-input">
-      </div>
-      <div>
-        <label>Password</label>
-        <input type="password" name="password" class="text-input">
-      </div>
-      <div>
-        <button type="submit" name="login-btn" class="btn">Login</button>
-      </div>
-      <p class="auth-nav">Or <a href="register.php">Sign Up</a></p>
-    </form>
-  </div>
 
-  <!-- JQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		const signUpButton = document.getElementById('signUp');
+		const signInButton = document.getElementById('signIn');
+		const container = document.getElementById('container');
 
-  <script src="scripts.js"></script>
+		signUpButton.addEventListener('click', () => {
+			container.classList.add("right-panel-active");
+		});
 
+		signInButton.addEventListener('click', () => {
+			container.classList.remove("right-panel-active");
+		});
+
+	</script>
 </body>
 
 </html>

@@ -169,7 +169,7 @@
                             <div class="row1">
                                 <div class="col-xl-6">
                                     <div class="inputBox">
-                                        <input type="submit" value="Update Ad"  name="btn_up"   class="butt">
+                                        <input type="submit" value="Update Blog"  name="btn_up"   class="butt">
                                   
 
  

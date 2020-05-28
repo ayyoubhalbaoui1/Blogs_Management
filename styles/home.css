@@ -123,12 +123,12 @@ textarea {
     width: 100%;
     background: #f52601;
     color: #fff;
-    border-radius: 60px;
+    /* border-radius: 60px; */
     border: none;
     outline: none;
     height: 80px;
     font-size: 24px;
-    margin-left: 479px;
+    margin-left: 287px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');

@@ -121,7 +121,7 @@ textarea {
 
 .butt {
     width: 100%;
-    background: #f52601;
+    background: #17eb22;
     color: #fff;
     /* border-radius: 60px; */
     border: none;
@@ -151,7 +151,7 @@ textarea {
 .card .post-image {
     height: 343px;
     overflow: hidden;
-    width: 330px;
+    width: 350px;
 }
 
 .card .post-image img {
@@ -163,7 +163,7 @@ textarea {
 }
 
 .card .news-content {
-    position: absolute;
+    position: static;
     padding: 20px;
     bottom: -150px;
     background: #fff;
@@ -176,7 +176,7 @@ textarea {
 
 .card .category {
     position: absolute;
-    top: -30px;
+    top: 0px;
     left: 0;
     height: 30px;
     background: #f52601;
@@ -217,7 +217,6 @@ textarea {
     padding: 0;
     color: ;
     transition: .5s;
-    opacity: 0;
     word-break: break-all;
 }
 

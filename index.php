@@ -74,7 +74,7 @@
 
 <!-- Posts Slider -->
 <div class="posts-slider">
-  <h1 class="slider-title">Trending Posts</h1>
+  <h1 class="slider-title">Trending Posts <i class="fa fa-fire" style="font-size:48px;color:yellow"></i></h1>
   <i class="fa fa-chevron-right next"></i>
   <i class="fa fa-chevron-left prev"></i>
 
